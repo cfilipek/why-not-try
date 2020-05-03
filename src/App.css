@@ -1,38 +1,116 @@
+* {
+  font-family: 'Rubik Mono One', sans-serif;
+  letter-spacing: 2px;
+}
+
 .App {
-  text-align: center;
+  margin: 80px 120px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h4 {
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h6 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-row {
+  margin-top: 60px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:focus {
+  outline:0;
+}
+
+.show-text button:focus {
+  color: #D8D8D8 !important;
+}
+
+.grey {
+  color: #D8D8D8;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.date {
+  font-size: 10px;
+}
+
+.content {
+  margin: 30px 0px;
+  display: flex;
+}
+
+.content img {
+  width: 300px;
+  height: 100%;
+}
+
+.content-text {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  margin-left: 60px;
+}
+
+.image-grid .date {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.image-grid img {
+  width: 150px;
+  height: 100%;
+}
+
+.show-images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-text {
+  display: flex;
+}
+
+.min-content {
+  max-width: min-content;
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 780px) {
+
+  .App {
+    margin: 80px 60px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    display: block;
+  }
+
+  .content-text {
+    margin: 20px 0px;
+  }
+
+  .show-text {
+    display: block;
+  }
+
+  .show-text img {
+    width: 100%;
+  }
+
+  .min-content {
+    max-width: max-content;
   }
 }

@@ -1,26 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import ShowEverything from './components/ShowEverything';
+import ShowImages from './components/ShowImages';
+import ShowText from './components/ShowText';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    show: 'show-everything',
+  }
+
+  showThis = (value) => {
+   this.setState({
+      show: value
+    })
+  }
+
+ showWhat = (value) => {
+    if (value === "show-everything"){
+      return (
+        <ShowEverything/>
+      )
+    }
+
+    else if (value === "show-images"){
+      return (
+        <ShowImages/>
+      )
+    }
+
+    else if (value === "filter"){
+      return (
+        <ShowText/>
+      )
+    }
+  }
+
+  render (){
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>
+            Why not try
+          </h1>
+        </header>
+        <Navbar state={this.state.show} showThis={this.showThis}/>
+        {this.showWhat(this.state.show)}
+      </div>
+    )
+  }
 }
 
 export default App;
