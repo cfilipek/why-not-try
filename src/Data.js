@@ -1,7 +1,14 @@
 import Art1 from './assets/art-01.png';
 import Art2 from './assets/art-02.png';
+import Art3 from './assets/art-03.jpg';
 
 const data = [
+  {
+    date: "mon may 04 2020",
+    img: Art3,
+    text: "I feel stuck. Stuck in the same routine; same pattern of being. I hope to breakout of this imbalance. I hope to quit smoking, I have a doctors appointment today to get the patch again, and start regularly exercising, and follow through with some tutorials. It feels like a lot but I am optimistic that I can manage despite quarantine and all else weighing me down.",
+    workedOn: ["to write"]
+  },
   {
     date: "sun may 03 2020",
     img: Art2,
